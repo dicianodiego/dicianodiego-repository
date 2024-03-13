@@ -1,8 +1,4 @@
-package com.fabrick.restclient.account;
-
-import com.fabrick.restclient.account.Amount;
-import com.fabrick.restclient.account.Creditor;
-import com.fabrick.restclient.account.Debtor;
+package com.fabrick.restclient.account.dto;
 
 import java.util.Date;
 import java.util.List;

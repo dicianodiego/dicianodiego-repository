@@ -1,4 +1,4 @@
-package com.fabrick.restclient.account;
+package com.fabrick.restclient.account.dto;
 
 public class ApiError {
     private String code;

@@ -1,6 +1,4 @@
-package com.fabrick.restclient.account;
-
-import com.fabrick.restclient.account.Creditor;
+package com.fabrick.restclient.account.dto;
 
 public record MoneyTransfertInput(Creditor creditor, String executionDate,
                                   String uri, String description, Double amount,

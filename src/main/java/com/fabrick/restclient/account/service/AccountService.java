@@ -1,8 +1,6 @@
-package com.fabrick.restclient.account;
+package com.fabrick.restclient.account.service;
 
-import com.fabrick.restclient.account.Balance;
-import com.fabrick.restclient.account.MoneyTransfert;
-import com.fabrick.restclient.account.ErrorAccountException;
+import com.fabrick.restclient.account.dto.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.ParameterizedTypeReference;
@@ -50,7 +48,7 @@ public class AccountService {
                 .body(new ParameterizedTypeReference<List<Transaction>>(){});
     }
 
-    public MoneyTransfert insertMoneyTranfert(Long accountId,MoneyTransfertInput moneyTransfertInput)  {
+    public MoneyTransfert insertMoneyTranfert(Long accountId, MoneyTransfertInput moneyTransfertInput)  {
         logger.info("[AccountService]<insertMoneyTranfert>inserting money transfert for " + accountId + "  of " + moneyTransfertInput.amount()  + " creditor " + moneyTransfertInput.creditor().name() );
         final String API_MONEY_TRANSFERT = "/api/gbs/banking/v4.0/accounts/"+accountId+"/payments/money-transfers";
         return restClient.post()

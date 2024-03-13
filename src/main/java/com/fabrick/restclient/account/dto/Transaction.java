@@ -1,4 +1,4 @@
-package com.fabrick.restclient.account;
+package com.fabrick.restclient.account.dto;
 
 public record Transaction(
         Long transactionId, String operationId, String accountingDate,

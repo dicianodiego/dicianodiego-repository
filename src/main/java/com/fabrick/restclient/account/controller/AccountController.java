@@ -1,13 +1,15 @@
-package com.fabrick.restclient.account;
+package com.fabrick.restclient.account.controller;
 
-import com.fabrick.restclient.account.AccountService;
-import com.fabrick.restclient.account.Balance;
+import com.fabrick.restclient.account.dto.MoneyTransfert;
+import com.fabrick.restclient.account.dto.MoneyTransfertInput;
+import com.fabrick.restclient.account.dto.Payload;
+import com.fabrick.restclient.account.dto.Transaction;
+import com.fabrick.restclient.account.service.AccountService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.List;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestClient;
 
 @RestController
 @RequestMapping("/api/accounts")
@@ -35,7 +37,7 @@ public class AccountController {
     }
 
     @PostMapping("/moneyTransfert/{accountId}")
-    public MoneyTransfert insertMoneyTranfert(@PathVariable Long accountId,@RequestBody MoneyTransfertInput moneyTransfertInput)
+    public MoneyTransfert insertMoneyTranfert(@PathVariable Long accountId, @RequestBody MoneyTransfertInput moneyTransfertInput)
     {
         logger.info("[AccountController]<insertMoneyTransfert>inserting money transfert for " + accountId + "  of " + moneyTransfertInput.amount()  + " creditor " + moneyTransfertInput.creditor().name() );
         return accountService.insertMoneyTranfert(accountId, moneyTransfertInput);

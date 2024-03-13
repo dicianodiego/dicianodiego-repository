@@ -1,5 +1,7 @@
 package com.fabrick.restclient.account;
 
+import com.fabrick.restclient.account.dto.*;
+import com.fabrick.restclient.account.service.AccountService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
@@ -17,8 +19,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
-
-import com.fabrick.restclient.account.Address;
 
 @RestClientTest(AccountService.class)
 class AccountServiceTest {

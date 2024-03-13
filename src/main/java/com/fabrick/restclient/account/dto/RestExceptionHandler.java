@@ -1,8 +1,6 @@
-package com.fabrick.restclient.account;
+package com.fabrick.restclient.account.dto;
 
 
-import com.fabrick.restclient.account.ApiError;
-import com.fabrick.restclient.account.ErrorAccountException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
